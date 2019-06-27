@@ -1,0 +1,138 @@
+.clock{
+  width: 100%;
+  background-color: #eee;
+  padding: 100px 0;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+.face{
+  position: relative;
+  margin: 0 auto;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: 0px 0px 0px 0px transparent;
+  transition: box-shadow .2s;
+}
+.face-shadow{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: transparent;
+  box-shadow: inset 0px 6px 6px 1px rgba(0,0,0,0.15);
+  mix-blend-mode: multiply;
+}
+.hands{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+#sec, #min, #hour{
+  position: absolute;
+  transform-origin: bottom center;
+  box-shadow: 0px 3px 4px 0px rgba(0,0,0,0.1);
+}
+#sec{
+  height: 146px;
+  width: 2px;
+  background-color: #ddd;
+  left: calc(50% - 1px);
+  top: calc(50% - 146px);
+}
+#min{
+  height: 128px;
+  width: 8px;
+  background-color: #ccc;
+  left: calc(50% - 4px);
+  top: calc(50% - 128px);
+}
+#hour{
+  height: 110px;
+  width: 16px;
+  background-color: #bbb;
+  left: calc(50% - 8px);
+  top: calc(50% - 110px);
+}
+.hour_tip{
+  width: 100%;
+  height: 8px;
+  background-color: tomato;
+  border-bottom: solid 2px #ccc;
+}
+
+.face-center{
+  position: absolute;
+  top: calc(50% - 18px);
+  left: calc(50% - 18px);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #5f5f5f;
+  box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2);
+
+}
+#lines{
+  position: absolute;
+  width: 99%;
+  height: 99%;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+#lines div{
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  transform-origin: 50%;
+  /* border-left: solid 2px #666; */
+}
+#lines div::after{
+  content: "";
+  display: block;
+  height: 20px;
+  border-left: solid 1px #ddd;
+  /* border-right: solid 1px #666; */
+}
+#lines div:nth-of-type(5n+0)::after {
+  content: "";
+  /* border-left: solid 2px #666; */
+  border-right: solid 1px #999;
+  border-left: solid 1px #999;
+  height: 30px;
+}
+.numbers{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: 2px;
+  color: #888;
+}
+.numbers p{
+  margin: 0;
+}
+
+#one, #two, #three, #four, #five, #six, #seven, #eight, #nine, #ten, #eleven, #twelve{
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  text-align: center;
+  left: calc(50% - 10px);
+  top: calc(50% - 10px);
+}
+#one{transform: rotate(-60deg) translateX(131px) rotate(60deg);}
+#two{transform: rotate(-30deg) translateX(131px) rotate(30deg);}
+#three{transform: translateX(131px);}
+#four{transform: rotate(30deg) translateX(131px) rotate(-30deg);}
+#five{transform: rotate(60deg) translateX(131px) rotate(-60deg);}
+#six{transform: rotate(90deg) translateX(131px) rotate(-90deg);}
+#seven{transform: rotate(120deg) translateX(131px) rotate(-120deg);}
+#eight{transform: rotate(150deg) translateX(131px) rotate(-150deg);}
+#nine{transform: rotate(180deg) translateX(131px) rotate(-180deg);}
+#ten{transform: rotate(210deg) translateX(131px) rotate(-210deg);}
+#eleven{transform: rotate(240deg) translateX(131px) rotate(-240deg);}
+#twelve{transform: rotate(-90deg) translateX(131px) rotate(90deg);}

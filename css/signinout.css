@@ -1,0 +1,6 @@
+#authorize_button, #signout_button{
+  display: none;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
