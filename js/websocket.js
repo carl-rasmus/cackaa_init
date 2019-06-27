@@ -8,7 +8,7 @@ window.onload = function() {
   var closeBtn = document.getElementById('close');
 
   // Create a new WebSocket.
-  var socket = new WebSocket('ws://echo.websocket.org');
+  var socket = new WebSocket('wss://echo.websocket.org');
 
   // Show a connected message when the WebSocket is opened.
   socket.onopen = function(event) {
@@ -35,7 +35,7 @@ window.onload = function() {
 
     return false;
   };
-  
+
   // Add the message to the messages list.
    messagesList.innerHTML += '<li class="sent"><span>Sent:</span>' + message + '</li>';
 
